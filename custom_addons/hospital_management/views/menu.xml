@@ -16,4 +16,32 @@
 
     <!-- Medical Records -->
     <menuitem id="hospital_management.menu_hospital_medical_records" name="Medical Records" parent="hospital_management.menu_hospital_root" action="hospital_management.medical_record_action" sequence="5"/>
+
+    <!-- Prescriptions -->
+    <menuitem id="hospital_management.menu_hospital_prescriptions" name="Prescriptions" parent="hospital_management.menu_hospital_root" action="hospital_management.prescription_action" sequence="6"/>
+
+    <!-- Lab Tests -->
+    <menuitem id="hospital_management.menu_hospital_lab_tests" name="Lab Tests" parent="hospital_management.menu_hospital_root" action="hospital_management.lab_test_action" sequence="7"/>
+
+    <!-- Radiology Tests -->
+    <menuitem id="hospital_management.menu_hospital_radiology_tests" name="Radiology Tests" parent="hospital_management.menu_hospital_root" action="hospital_management.radiology_test_action" sequence="8"/>
+
+    <!-- Observations -->
+    <menuitem id="hospital_management.menu_hospital_observations" name="Observations" parent="hospital_management.menu_hospital_root" action="hospital_management.observation_action" sequence="9"/>
+
+    <!-- Beds -->
+    <menuitem id="hospital_management.menu_hospital_beds" name="Beds" parent="hospital_management.menu_hospital_root" action="hospital_management.bed_action" sequence="10"/>
+
+    <!-- Admissions -->
+    <menuitem id="hospital_management.menu_hospital_admissions" name="Admissions" parent="hospital_management.menu_hospital_root" action="hospital_management.admission_action" sequence="11"/>
+
+    <!-- Drugs -->
+    <menuitem id="hospital_management.menu_hospital_drugs" name="Drugs" parent="hospital_management.menu_hospital_root" action="hospital_management.drug_action" sequence="12"/>
+
+    <!-- Invoices -->
+    <menuitem id="hospital_management.menu_hospital_invoices" name="Invoices" parent="hospital_management.menu_hospital_root" action="hospital_management.invoice_action" sequence="13"/>
+
+    <!-- Reports -->
+    <menuitem id="hospital_management.menu_hospital_reports" name="Reports" parent="hospital_management.menu_hospital_root" sequence="14"/>
+    <menuitem id="hospital_management.menu_hospital_patient_report" name="Patient Report" parent="hospital_management.menu_hospital_reports" action="hospital_management.action_patient_report" sequence="1"/>
 </odoo>

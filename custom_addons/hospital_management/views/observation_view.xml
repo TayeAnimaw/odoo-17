@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Observation Tree View -->
+        <record id="view_observation_tree" model="ir.ui.view">
+            <field name="name">hospital.observation.tree</field>
+            <field name="model">hospital.observation</field>
+            <field name="arch" type="xml">
+                <tree string="Observations">
+                    <field name="patient_id"/>
+                    <field name="observation_date"/>
+                    <field name="concept"/>
+                    <field name="value"/>
+                    <field name="unit"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Observation Form View -->
+        <record id="view_observation_form" model="ir.ui.view">
+            <field name="name">hospital.observation.form</field>
+            <field name="model">hospital.observation</field>
+            <field name="arch" type="xml">
+                <form string="Observation">
+                    <sheet>
+                        <group>
+                            <field name="patient_id"/>
+                            <field name="medical_record_id"/>
+                            <field name="observation_date"/>
+                            <field name="concept"/>
+                            <field name="value"/>
+                            <field name="unit"/>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Observation Action -->
+        <record id="observation_action" model="ir.actions.act_window">
+            <field name="name">Observations</field>
+            <field name="res_model">hospital.observation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
