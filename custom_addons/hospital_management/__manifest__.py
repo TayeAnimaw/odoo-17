@@ -20,6 +20,7 @@
         'views/menu.xml',
         'reports/patient_report.xml',
     ],
+    'description': 'Comprehensive Hospital Management System with Bahmni-like features including patient registration, clinical workflows, pharmacy, lab, radiology, inpatient management, billing, and more.',
     'installable': True,
     'application': True,
 }

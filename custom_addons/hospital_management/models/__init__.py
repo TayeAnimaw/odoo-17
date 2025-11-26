@@ -14,3 +14,6 @@ from . import invoice
 from . import location
 from . import concept
 from . import procedure
+from . import program
+from . import diagnosis
+from . import allergy
