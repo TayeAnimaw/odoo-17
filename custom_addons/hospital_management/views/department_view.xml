@@ -5,7 +5,7 @@
         <field name="res_model">hospital.department</field>
         <field name="view_mode">tree,form</field>
     </record>
-<odoo>
+
     <!-- Tree View -->
     <record id="hospital_management.view_department_tree" model="ir.ui.view">
         <field name="name">hospital.department.tree</field>
