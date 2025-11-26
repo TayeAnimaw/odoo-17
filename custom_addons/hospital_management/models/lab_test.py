@@ -1,0 +1,16 @@
+from odoo import models, fields
+
+class HospitalLabTest(models.Model):
+    _name = 'hospital.lab_test'
+    _description = 'Lab Test'
+
+    medical_record_id = fields.Many2one('hospital.medical_record', string='Medical Record', required=True)
+    test_name = fields.Char(string='Test Name', required=True)
+    test_date = fields.Datetime(string='Test Date', required=True)
+    result = fields.Text(string='Result')
+    normal_range = fields.Char(string='Normal Range')
+    status = fields.Selection([
+        ('ordered', 'Ordered'),
+        ('completed', 'Completed'),
+        ('pending', 'Pending')
+    ], string='Status', default='ordered')
