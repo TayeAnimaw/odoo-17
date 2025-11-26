@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="program_action" model="ir.actions.act_window">
+            <field name="name">Programs</field>
+            <field name="res_model">hospital.program</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="view_program_tree" model="ir.ui.view">
+            <field name="name">hospital.program.tree</field>
+            <field name="model">hospital.program</field>
+            <field name="arch" type="xml">
+                <tree string="Programs">
+                    <field name="name"/>
+                    <field name="status"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_program_form" model="ir.ui.view">
+            <field name="name">hospital.program.form</field>
+            <field name="model">hospital.program</field>
+            <field name="arch" type="xml">
+                <form string="Program">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="patient_ids"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="status"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

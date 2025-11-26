@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="procedure_action" model="ir.actions.act_window">
+            <field name="name">Procedures</field>
+            <field name="res_model">hospital.procedure</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="view_procedure_tree" model="ir.ui.view">
+            <field name="name">hospital.procedure.tree</field>
+            <field name="model">hospital.procedure</field>
+            <field name="arch" type="xml">
+                <tree string="Procedures">
+                    <field name="name"/>
+                    <field name="procedure_date"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_procedure_form" model="ir.ui.view">
+            <field name="name">hospital.procedure.form</field>
+            <field name="model">hospital.procedure</field>
+            <field name="arch" type="xml">
+                <form string="Procedure">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="description"/>
+                            <field name="cost"/>
+                            <field name="duration"/>
+                            <field name="medical_record_id"/>
+                            <field name="procedure_date"/>
+                            <field name="status"/>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

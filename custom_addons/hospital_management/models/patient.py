@@ -32,6 +32,8 @@ class HospitalPatient(models.Model):
     appointment_ids = fields.One2many('hospital.appointment', 'patient_id', string='Appointments')
     medical_record_ids = fields.One2many('hospital.medical_record', 'patient_id', string='Medical Records')
     admission_ids = fields.One2many('hospital.admission', 'patient_id', string='Admissions')
+    allergy_ids = fields.One2many('hospital.allergy', 'patient_id', string='Allergies')
+    relationship_ids = fields.One2many('hospital.relationship', 'patient_id', string='Relationships')
 
     def _generate_patient_id(self):
         return self.env['ir.sequence'].next_by_code('hospital.patient') or 'New'

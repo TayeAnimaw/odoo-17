@@ -17,3 +17,5 @@ from . import procedure
 from . import program
 from . import diagnosis
 from . import allergy
+from . import relationship
+from . import queue

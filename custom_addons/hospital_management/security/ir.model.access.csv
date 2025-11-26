@@ -13,3 +13,5 @@ access_hospital_prescription_user,hospital.prescription user,model_hospital_pres
 access_hospital_prescription_manager,hospital.prescription manager,model_hospital_prescription,base.group_erp_manager,1,1,1,1
 access_hospital_lab_test_user,hospital.lab_test user,model_hospital_lab_test,base.group_user,1,0,0,0
 access_hospital_lab_test_manager,hospital.lab_test manager,model_hospital_lab_test,base.group_erp_manager,1,1,1,1
+access_hospital_radiology_test_user,hospital.radiology_test user,model_hospital_radiology_test,base.group_user,1,0,0,0
+access_hospital_radiology_test_manager,hospital.radiology_test manager,model_hospital_radiology_test,base.group_erp_manager,1,1,1,1

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="concept_action" model="ir.actions.act_window">
+            <field name="name">Concepts</field>
+            <field name="res_model">hospital.concept</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="view_concept_tree" model="ir.ui.view">
+            <field name="name">hospital.concept.tree</field>
+            <field name="model">hospital.concept</field>
+            <field name="arch" type="xml">
+                <tree string="Concepts">
+                    <field name="name"/>
+                    <field name="datatype"/>
+                    <field name="unit"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_concept_form" model="ir.ui.view">
+            <field name="name">hospital.concept.form</field>
+            <field name="model">hospital.concept</field>
+            <field name="arch" type="xml">
+                <form string="Concept">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="datatype"/>
+                            <field name="unit"/>
+                            <field name="parent_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

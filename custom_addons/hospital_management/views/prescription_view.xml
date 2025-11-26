@@ -13,10 +13,12 @@
         <field name="arch" type="xml">
             <tree string="Prescriptions">
                 <field name="medical_record_id"/>
-                <field name="medication"/>
+                <field name="drug_id"/>
                 <field name="dosage"/>
                 <field name="frequency"/>
                 <field name="duration"/>
+                <field name="quantity"/>
+                <field name="dispensed"/>
             </tree>
         </field>
     </record>
@@ -30,11 +32,13 @@
                 <sheet>
                     <group>
                         <field name="medical_record_id"/>
-                        <field name="medication"/>
+                        <field name="drug_id"/>
                         <field name="dosage"/>
                         <field name="frequency"/>
                         <field name="duration"/>
+                        <field name="quantity"/>
                         <field name="instructions"/>
+                        <field name="dispensed"/>
                     </group>
                 </sheet>
             </form>

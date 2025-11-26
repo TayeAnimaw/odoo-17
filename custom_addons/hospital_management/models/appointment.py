@@ -7,6 +7,8 @@ class HospitalAppointment(models.Model):
     patient_id = fields.Many2one('hospital.patient', string='Patient', required=True)
     doctor_id = fields.Many2one('hospital.doctor', string='Doctor', required=True)
     appointment_date = fields.Datetime(string='Appointment Date', required=True)
+    duration = fields.Integer(string='Duration (minutes)', default=30)
+    slot = fields.Char(string='Time Slot')
     reason = fields.Text(string='Reason for Visit')
     status = fields.Selection([
         ('scheduled', 'Scheduled'),

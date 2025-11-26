@@ -1,0 +1,43 @@
+<odoo>
+    <!-- Action -->
+    <record id="hospital_management.radiology_test_action" model="ir.actions.act_window">
+        <field name="name">Radiology Tests</field>
+        <field name="res_model">hospital.radiology_test</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="hospital_management.view_radiology_test_tree" model="ir.ui.view">
+        <field name="name">hospital.radiology_test.tree</field>
+        <field name="model">hospital.radiology_test</field>
+        <field name="arch" type="xml">
+            <tree string="Radiology Tests">
+                <field name="medical_record_id"/>
+                <field name="test_name"/>
+                <field name="test_date"/>
+                <field name="status"/>
+                <field name="result"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="hospital_management.view_radiology_test_form" model="ir.ui.view">
+        <field name="name">hospital.radiology_test.form</field>
+        <field name="model">hospital.radiology_test</field>
+        <field name="arch" type="xml">
+            <form string="Radiology Test">
+                <sheet>
+                    <group>
+                        <field name="medical_record_id"/>
+                        <field name="test_name"/>
+                        <field name="test_date"/>
+                        <field name="result"/>
+                        <field name="status"/>
+                        <field name="notes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
