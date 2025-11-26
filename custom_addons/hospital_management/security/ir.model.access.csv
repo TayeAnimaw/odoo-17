@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hospital_patient_user,hospital.patient user,model_hospital_patient,base.group_user,1,0,0,0
+access_hospital_patient_manager,hospital.patient manager,model_hospital_patient,base.group_erp_manager,1,1,1,1
+access_hospital_doctor_user,hospital.doctor user,model_hospital_doctor,base.group_user,1,0,0,0
+access_hospital_doctor_manager,hospital.doctor manager,model_hospital_doctor,base.group_erp_manager,1,1,1,1
+access_hospital_department_user,hospital.department user,model_hospital_department,base.group_user,1,0,0,0
+access_hospital_department_manager,hospital.department manager,model_hospital_department,base.group_erp_manager,1,1,1,1
+access_hospital_appointment_user,hospital.appointment user,model_hospital_appointment,base.group_user,1,0,0,0
+access_hospital_appointment_manager,hospital.appointment manager,model_hospital_appointment,base.group_erp_manager,1,1,1,1
+access_hospital_medical_record_user,hospital.medical_record user,model_hospital_medical_record,base.group_user,1,0,0,0
+access_hospital_medical_record_manager,hospital.medical_record manager,model_hospital_medical_record,base.group_erp_manager,1,1,1,1
+access_hospital_prescription_user,hospital.prescription user,model_hospital_prescription,base.group_user,1,0,0,0
+access_hospital_prescription_manager,hospital.prescription manager,model_hospital_prescription,base.group_erp_manager,1,1,1,1
+access_hospital_lab_test_user,hospital.lab_test user,model_hospital_lab_test,base.group_user,1,0,0,0
+access_hospital_lab_test_manager,hospital.lab_test manager,model_hospital_lab_test,base.group_erp_manager,1,1,1,1
