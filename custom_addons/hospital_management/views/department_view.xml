@@ -7,7 +7,7 @@
     </record>
 <odoo>
     <!-- Tree View -->
-    <record id="view_department_tree" model="ir.ui.view">
+    <record id="hospital_management.view_department_tree" model="ir.ui.view">
         <field name="name">hospital.department.tree</field>
         <field name="model">hospital.department</field>
         <field name="arch" type="xml">
@@ -20,7 +20,7 @@
     </record>
 
     <!-- Form View -->
-    <record id="view_department_form" model="ir.ui.view">
+    <record id="hospital_management.view_department_form" model="ir.ui.view">
         <field name="name">hospital.department.form</field>
         <field name="model">hospital.department</field>
         <field name="arch" type="xml">
