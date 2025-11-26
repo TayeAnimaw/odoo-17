@@ -1,4 +1,11 @@
 <odoo>
+    <!-- Action -->
+    <record id="hospital.doctor_action" model="ir.actions.act_window">
+        <field name="name">Doctors</field>
+        <field name="res_model">hospital.doctor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+<odoo>
     <!-- Tree View -->
     <record id="view_doctor_tree" model="ir.ui.view">
         <field name="name">hospital.doctor.tree</field>

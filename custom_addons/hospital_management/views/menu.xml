@@ -6,3 +6,14 @@
     <menuitem id="menu_hospital_patients" name="Patients" parent="menu_hospital_root" action="hospital.patient_action" sequence="1"/>
 
     <!-- Doctors -->
+    <menuitem id="menu_hospital_doctors" name="Doctors" parent="menu_hospital_root" action="hospital.doctor_action" sequence="2"/>
+
+    <!-- Departments -->
+    <menuitem id="menu_hospital_departments" name="Departments" parent="menu_hospital_root" action="hospital.department_action" sequence="3"/>
+
+    <!-- Appointments -->
+    <menuitem id="menu_hospital_appointments" name="Appointments" parent="menu_hospital_root" action="hospital.appointment_action" sequence="4"/>
+
+    <!-- Medical Records -->
+    <menuitem id="menu_hospital_medical_records" name="Medical Records" parent="menu_hospital_root" action="hospital.medical_record_action" sequence="5"/>
+</odoo>
