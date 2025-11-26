@@ -1,6 +1,6 @@
 <odoo>
     <!-- Tree View -->
-    <record id="view_patient_tree" model="ir.ui.view">
+    <record id="hospital_management.view_patient_tree" model="ir.ui.view">
         <field name="name">hospital.patient.tree</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
@@ -14,7 +14,7 @@
     </record>
 
     <!-- Form View -->
-    <record id="view_patient_form" model="ir.ui.view">
+    <record id="hospital_management.view_patient_form" model="ir.ui.view">
         <field name="name">hospital.patient.form</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
@@ -35,7 +35,7 @@
     </record>
 
     <!-- Action -->
-    <record id="hospital.patient_action" model="ir.actions.act_window">
+    <record id="hospital_management.patient_action" model="ir.actions.act_window">
         <field name="name">Patients</field>
         <field name="res_model">hospital.patient</field>
         <field name="view_mode">tree,form</field>

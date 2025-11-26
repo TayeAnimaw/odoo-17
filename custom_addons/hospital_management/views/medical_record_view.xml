@@ -1,6 +1,6 @@
 <odoo>
     <!-- Action -->
-    <record id="hospital.medical_record_action" model="ir.actions.act_window">
+    <record id="hospital_management.medical_record_action" model="ir.actions.act_window">
         <field name="name">Medical Records</field>
         <field name="res_model">hospital.medical_record</field>
         <field name="view_mode">tree,form</field>
