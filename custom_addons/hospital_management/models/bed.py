@@ -5,7 +5,7 @@ class HospitalBed(models.Model):
     _description = 'Hospital Bed'
 
     name = fields.Char(string='Bed Number', required=True)
-    ward = fields.Char(string='Ward')
+    location_id = fields.Many2one('hospital.location', string='Location')
     status = fields.Selection([
         ('available', 'Available'),
         ('occupied', 'Occupied'),

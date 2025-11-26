@@ -1,5 +1,5 @@
 {
-    'name': 'Hospital Management',
+    'name': 'Taye Hospital System',
     'version': '1.0',
     'summary': 'Full Hospital Management System',
     'description': 'Comprehensive hospital management system including patient registration, appointments, medical records, pharmacy, lab, and billing - similar to Bahmni',

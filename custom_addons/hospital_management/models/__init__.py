@@ -11,3 +11,6 @@ from . import bed
 from . import admission
 from . import drug
 from . import invoice
+from . import location
+from . import concept
+from . import procedure
