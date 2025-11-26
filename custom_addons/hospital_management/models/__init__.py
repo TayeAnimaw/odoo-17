@@ -5,3 +5,9 @@ from . import appointment
 from . import medical_record
 from . import prescription
 from . import lab_test
+from . import observation
+from . import radiology_test
+from . import bed
+from . import admission
+from . import drug
+from . import invoice

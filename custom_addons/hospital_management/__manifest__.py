@@ -7,6 +7,7 @@
     'author': 'Taye Animaw',
     'depends': ['base', 'mail', 'calendar', 'account'],
     'data': [
+        'data/sequences.xml',
         'security/ir.model.access.csv',
         'views/patient_view.xml',
         'views/doctor_view.xml',
