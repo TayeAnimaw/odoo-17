@@ -1,0 +1,40 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="hospital_management.view_bed_tree" model="ir.ui.view">
+        <field name="name">hospital.bed.tree</field>
+        <field name="model">hospital.bed</field>
+        <field name="arch" type="xml">
+            <tree string="Beds">
+                <field name="name"/>
+                <field name="location_id"/>
+                <field name="status"/>
+                <field name="patient_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="hospital_management.view_bed_form" model="ir.ui.view">
+        <field name="name">hospital.bed.form</field>
+        <field name="model">hospital.bed</field>
+        <field name="arch" type="xml">
+            <form string="Bed">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="location_id"/>
+                        <field name="status"/>
+                        <field name="patient_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="hospital_management.bed_action" model="ir.actions.act_window">
+        <field name="name">Beds</field>
+        <field name="res_model">hospital.bed</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

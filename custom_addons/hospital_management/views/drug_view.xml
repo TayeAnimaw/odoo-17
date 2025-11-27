@@ -1,0 +1,47 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="hospital_management.view_drug_tree" model="ir.ui.view">
+        <field name="name">hospital.drug.tree</field>
+        <field name="model">hospital.drug</field>
+        <field name="arch" type="xml">
+            <tree string="Drugs">
+                <field name="name"/>
+                <field name="generic_name"/>
+                <field name="dosage_form"/>
+                <field name="strength"/>
+                <field name="stock_quantity"/>
+                <field name="unit_price"/>
+                <field name="expiry_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="hospital_management.view_drug_form" model="ir.ui.view">
+        <field name="name">hospital.drug.form</field>
+        <field name="model">hospital.drug</field>
+        <field name="arch" type="xml">
+            <form string="Drug">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="generic_name"/>
+                        <field name="dosage_form"/>
+                        <field name="strength"/>
+                        <field name="stock_quantity"/>
+                        <field name="reorder_level"/>
+                        <field name="unit_price"/>
+                        <field name="expiry_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="hospital_management.drug_action" model="ir.actions.act_window">
+        <field name="name">Drugs</field>
+        <field name="res_model">hospital.drug</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

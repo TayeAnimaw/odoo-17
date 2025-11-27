@@ -1,0 +1,44 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="hospital_management.view_admission_tree" model="ir.ui.view">
+        <field name="name">hospital.admission.tree</field>
+        <field name="model">hospital.admission</field>
+        <field name="arch" type="xml">
+            <tree string="Admissions">
+                <field name="patient_id"/>
+                <field name="bed_id"/>
+                <field name="admission_date"/>
+                <field name="discharge_date"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="hospital_management.view_admission_form" model="ir.ui.view">
+        <field name="name">hospital.admission.form</field>
+        <field name="model">hospital.admission</field>
+        <field name="arch" type="xml">
+            <form string="Admission">
+                <sheet>
+                    <group>
+                        <field name="patient_id"/>
+                        <field name="bed_id"/>
+                        <field name="admission_date"/>
+                        <field name="discharge_date"/>
+                        <field name="status"/>
+                        <field name="reason"/>
+                        <field name="notes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="hospital_management.admission_action" model="ir.actions.act_window">
+        <field name="name">Admissions</field>
+        <field name="res_model">hospital.admission</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

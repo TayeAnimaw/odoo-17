@@ -29,6 +29,18 @@
     <!-- Observations -->
     <menuitem id="hospital_management.menu_hospital_observations" name="Observations" parent="hospital_management.menu_hospital_root" action="hospital_management.observation_action" sequence="9"/>
 
+    <!-- Beds -->
+    <menuitem id="hospital_management.menu_hospital_beds" name="Beds" parent="hospital_management.menu_hospital_root" action="hospital_management.bed_action" sequence="10"/>
+
+    <!-- Admissions -->
+    <menuitem id="hospital_management.menu_hospital_admissions" name="Admissions" parent="hospital_management.menu_hospital_root" action="hospital_management.admission_action" sequence="11"/>
+
+    <!-- Drugs -->
+    <!-- <menuitem id="hospital_management.menu_hospital_drugs" name="Drugs" parent="hospital_management.menu_hospital_root" action="hospital_management.drug_action" sequence="12"/> -->
+
+    <!-- Invoices -->
+    <menuitem id="hospital_management.menu_hospital_invoices" name="Invoices" parent="hospital_management.menu_hospital_root" action="hospital_management.invoice_action" sequence="13"/>
+
 
     <!-- Locations -->
     <menuitem id="hospital_management.menu_hospital_locations" name="Locations" parent="hospital_management.menu_hospital_root" action="hospital_management.location_action" sequence="14"/>
