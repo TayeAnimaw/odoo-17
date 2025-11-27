@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Set hospital home as website homepage -->
+    <record id="hospital_homepage" model="website.page">
+        <field name="name">Hospital Home</field>
+        <field name="url">/</field>
+        <field name="view_id" ref="hospital_home_template"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="is_homepage">True</field>
+    </record>
+
+    <!-- Update default website to use hospital homepage -->
+    <record id="website.default_website" model="website">
+        <field name="homepage_id" ref="hospital_homepage"/>
+    </record>
+    <template id="hospital_home_template" name="Hospital Home">
+        <t t-call="website.layout">
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="display-4">Welcome to Taye Hospital</h1>
+                    <p class="lead">Your health is our priority. Comprehensive healthcare services with modern technology.</p>
+                    <t t-if="user_id._is_public()">
+                        <a href="/web/login" class="btn btn-primary btn-lg">Login</a>
+                        <a href="/web/signup" class="btn btn-secondary btn-lg">Sign Up</a>
+                    </t>
+                </div>
+            </section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Patient Care</h2>
+                        <p>Advanced patient management with Bahmni features.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Doctor Portal</h2>
+                        <p>Efficient tools for medical professionals.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Admin Dashboard</h2>
+                        <p>Complete hospital administration.</p>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="hospital_about_template" name="Hospital About">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Information about the hospital.</p>
+            </div>
+        </t>
+    </template>
+
+    <template id="hospital_services_template" name="Hospital Services">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Our Services</h1>
+                <p>List of services offered.</p>
+            </div>
+        </t>
+    </template>
+
+    <template id="hospital_contacts_template" name="Hospital Contacts">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Contact information.</p>
+            </div>
+        </t>
+    </template>
+
+    <template id="hospital_blogs_template" name="Hospital Blogs">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Blogs</h1>
+                <p>Latest blog posts.</p>
+            </div>
+        </t>
+    </template>
+
+    <template id="hospital_news_template" name="Hospital News">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>News</h1>
+                <p>Latest news.</p>
+            </div>
+        </t>
+    </template>
+
+    <template id="doctor_dashboard_template" name="Doctor Dashboard">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Doctor Dashboard</h1>
+                <p>Welcome, Doctor. Manage your patients and appointments.</p>
+                <a href="/web" class="btn btn-primary">Go to Backend</a>
+            </div>
+        </t>
+    </template>
+
+    <template id="patient_dashboard_template" name="Patient Dashboard">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Patient Dashboard</h1>
+                <p>Welcome, Patient. View your medical records.</p>
+                <a href="/web" class="btn btn-primary">Go to Backend</a>
+            </div>
+        </t>
+    </template>
+
+    <template id="admin_dashboard_template" name="Admin Dashboard">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Admin Dashboard</h1>
+                <p>Welcome, Admin. Manage the hospital system.</p>
+                <a href="/web" class="btn btn-primary">Go to Backend</a>
+            </div>
+        </t>
+    </template>
+</odoo>

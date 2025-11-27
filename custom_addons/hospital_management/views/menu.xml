@@ -3,57 +3,57 @@
     <menuitem id="hospital_management.menu_hospital_root" name="Hospital Management" sequence="1"/>
 
     <!-- Patients -->
-    <menuitem id="hospital_management.menu_hospital_patients" name="Patients" parent="hospital_management.menu_hospital_root" action="hospital_management.patient_action" sequence="1"/>
+    <menuitem id="hospital_management.menu_hospital_patients" name="Patients" parent="hospital_management.menu_hospital_root" action="hospital_management.patient_action" sequence="1" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Doctors -->
-    <menuitem id="hospital_management.menu_hospital_doctors" name="Doctors" parent="hospital_management.menu_hospital_root" action="hospital_management.doctor_action" sequence="2"/>
+    <menuitem id="hospital_management.menu_hospital_doctors" name="Doctors" parent="hospital_management.menu_hospital_root" action="hospital_management.doctor_action" sequence="2" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Departments -->
-    <menuitem id="hospital_management.menu_hospital_departments" name="Departments" parent="hospital_management.menu_hospital_root" action="hospital_management.department_action" sequence="3"/>
+    <menuitem id="hospital_management.menu_hospital_departments" name="Departments" parent="hospital_management.menu_hospital_root" action="hospital_management.department_action" sequence="3" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Appointments -->
-    <menuitem id="hospital_management.menu_hospital_appointments" name="Appointments" parent="hospital_management.menu_hospital_root" action="hospital_management.appointment_action" sequence="4"/>
+    <menuitem id="hospital_management.menu_hospital_appointments" name="Appointments" parent="hospital_management.menu_hospital_root" action="hospital_management.appointment_action" sequence="4" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Medical Records -->
-    <menuitem id="hospital_management.menu_hospital_medical_records" name="Medical Records" parent="hospital_management.menu_hospital_root" action="hospital_management.medical_record_action" sequence="5"/>
+    <menuitem id="hospital_management.menu_hospital_medical_records" name="Medical Records" parent="hospital_management.menu_hospital_root" action="hospital_management.medical_record_action" sequence="5" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Prescriptions -->
-    <menuitem id="hospital_management.menu_hospital_prescriptions" name="Prescriptions" parent="hospital_management.menu_hospital_root" action="hospital_management.prescription_action" sequence="6"/>
+    <menuitem id="hospital_management.menu_hospital_prescriptions" name="Prescriptions" parent="hospital_management.menu_hospital_root" action="hospital_management.prescription_action" sequence="6" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Lab Tests -->
-    <menuitem id="hospital_management.menu_hospital_lab_tests" name="Lab Tests" parent="hospital_management.menu_hospital_root" action="hospital_management.lab_test_action" sequence="7"/>
+    <menuitem id="hospital_management.menu_hospital_lab_tests" name="Lab Tests" parent="hospital_management.menu_hospital_root" action="hospital_management.lab_test_action" sequence="7" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Radiology Tests -->
-    <menuitem id="hospital_management.menu_hospital_radiology_tests" name="Radiology Tests" parent="hospital_management.menu_hospital_root" action="hospital_management.radiology_test_action" sequence="8"/>
+    <menuitem id="hospital_management.menu_hospital_radiology_tests" name="Radiology Tests" parent="hospital_management.menu_hospital_root" action="hospital_management.radiology_test_action" sequence="8" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Observations -->
-    <menuitem id="hospital_management.menu_hospital_observations" name="Observations" parent="hospital_management.menu_hospital_root" action="hospital_management.observation_action" sequence="9"/>
+    <menuitem id="hospital_management.menu_hospital_observations" name="Observations" parent="hospital_management.menu_hospital_root" action="hospital_management.observation_action" sequence="9" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Beds -->
-    <menuitem id="hospital_management.menu_hospital_beds" name="Beds" parent="hospital_management.menu_hospital_root" action="hospital_management.bed_action" sequence="10"/>
+    <menuitem id="hospital_management.menu_hospital_beds" name="Beds" parent="hospital_management.menu_hospital_root" action="hospital_management.bed_action" sequence="10" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Admissions -->
-    <menuitem id="hospital_management.menu_hospital_admissions" name="Admissions" parent="hospital_management.menu_hospital_root" action="hospital_management.admission_action" sequence="11"/>
+    <menuitem id="hospital_management.menu_hospital_admissions" name="Admissions" parent="hospital_management.menu_hospital_root" action="hospital_management.admission_action" sequence="11" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Drugs -->
     <!-- <menuitem id="hospital_management.menu_hospital_drugs" name="Drugs" parent="hospital_management.menu_hospital_root" action="hospital_management.drug_action" sequence="12"/> -->
 
     <!-- Invoices -->
-    <menuitem id="hospital_management.menu_hospital_invoices" name="Invoices" parent="hospital_management.menu_hospital_root" action="hospital_management.invoice_action" sequence="13"/>
+    <menuitem id="hospital_management.menu_hospital_invoices" name="Invoices" parent="hospital_management.menu_hospital_root" action="hospital_management.invoice_action" sequence="13" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
 
     <!-- Locations -->
-    <menuitem id="hospital_management.menu_hospital_locations" name="Locations" parent="hospital_management.menu_hospital_root" action="hospital_management.location_action" sequence="14"/>
+    <menuitem id="hospital_management.menu_hospital_locations" name="Locations" parent="hospital_management.menu_hospital_root" action="hospital_management.location_action" sequence="14" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Concepts -->
-    <menuitem id="hospital_management.menu_hospital_concepts" name="Concepts" parent="hospital_management.menu_hospital_root" action="hospital_management.concept_action" sequence="15"/>
+    <menuitem id="hospital_management.menu_hospital_concepts" name="Concepts" parent="hospital_management.menu_hospital_root" action="hospital_management.concept_action" sequence="15" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Procedures -->
-    <menuitem id="hospital_management.menu_hospital_procedures" name="Procedures" parent="hospital_management.menu_hospital_root" action="hospital_management.procedure_action" sequence="16"/>
+    <menuitem id="hospital_management.menu_hospital_procedures" name="Procedures" parent="hospital_management.menu_hospital_root" action="hospital_management.procedure_action" sequence="16" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Programs -->
-    <menuitem id="hospital_management.menu_hospital_programs" name="Programs" parent="hospital_management.menu_hospital_root" action="hospital_management.program_action" sequence="17"/>
+    <menuitem id="hospital_management.menu_hospital_programs" name="Programs" parent="hospital_management.menu_hospital_root" action="hospital_management.program_action" sequence="17" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 
     <!-- Reports -->
-    <menuitem id="hospital_management.menu_hospital_reports" name="Reports" parent="hospital_management.menu_hospital_root" sequence="18"/>
+    <menuitem id="hospital_management.menu_hospital_reports" name="Reports" parent="hospital_management.menu_hospital_root" sequence="18" groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"/>
 </odoo>
