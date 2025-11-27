@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="procedure_action" model="ir.actions.act_window">
+        <record id="hospital_management.procedure_action" model="ir.actions.act_window">
             <field name="name">Procedures</field>
             <field name="res_model">hospital.procedure</field>
             <field name="view_mode">tree,form</field>

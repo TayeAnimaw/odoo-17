@@ -38,7 +38,7 @@
         </record>
 
         <!-- Observation Action -->
-        <record id="observation_action" model="ir.actions.act_window">
+        <record id="hospital_management.observation_action" model="ir.actions.act_window">
             <field name="name">Observations</field>
             <field name="res_model">hospital.observation</field>
             <field name="view_mode">tree,form</field>

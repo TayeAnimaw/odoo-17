@@ -1,5 +1,5 @@
 {
-    'name': 'Taye Hospital System',
+    'name': ' Taye Hospital System',
     'version': '1.0',
     'summary': 'Full Hospital Management System',
     'category': 'Healthcare',
