@@ -6,12 +6,8 @@ class HospitalHome(Home):
     @http.route('/web', type='http', auth="user", website=True)
     def web_client(self, s_action=None, **kw):
         user = request.env.user
-        if user.has_group('hospital_management.group_hospital_doctor'):
-            return request.redirect('/hospital/dashboard/doctor')
-        elif user.has_group('hospital_management.group_hospital_patient'):
-            return request.redirect('/hospital/dashboard/patient')
-        elif user.has_group('hospital_management.group_hospital_admin'):
-            return request.redirect('/hospital/dashboard/admin')
+        if user.has_group('hospital_management.group_hospital_doctor') or user.has_group('hospital_management.group_hospital_patient') or user.has_group('hospital_management.group_hospital_admin'):
+            return request.redirect('/web#action=119&cids=1&menu_id=78')
         else:
             return super(HospitalHome, self).web_client(s_action, **kw)
 
