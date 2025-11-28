@@ -1,5 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <template id="hospital_home_template" name="Hospital Home">
+        <t t-call="website.layout">
+            <!-- Hero Section -->
+            <section class="hero-section bg-primary text-white py-5 vh-100 d-flex align-items-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x600/007bff/ffffff?text=Hospital+Building') center/cover no-repeat;">
+                <div class="container-fluid">
+                <h1 class="display-3 fw-bold mb-3">Welcome to Taye Hospital System</h1>
+                    <div class="row align-items-center h-100">
+                    
+                        <div class="col-lg-6">
+                            
+                            <p class="fs-5 mb-4">Your health is our priority. Comprehensive healthcare services with modern technology and compassionate care.</p>
+                            <div class="d-flex gap-3 flex-wrap">                                
+                                <t t-if="user_id._is_public()">
+                                    <a href="/web/login" class="btn btn-warning btn-lg px-4 py-2">Login</a>
+                                </t>
+                                <t t-if="not user_id._is_public()">
+                                    <a href="/hospital/management" class="btn btn-success btn-lg px-4 py-2 shadow-sm">Go to Live</a>
+                                </t>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <img src="data:image/jpeg;base64,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" alt="Medical Team" class="img-fluid rounded shadow-lg"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="py-5 bg-light">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold">Our Services</h2>
+                        <p class="lead text-muted">Comprehensive healthcare solutions tailored to your needs</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="https://via.placeholder.com/400x250/28a745/ffffff?text=Patient+Care" class="card-img-top" alt="Patient Care"/>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">Patient Care</h5>
+                                    <p class="card-text">Advanced patient management with comprehensive medical records and personalized care plans.</p>
+                                    <a href="/hospital/services" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="https://via.placeholder.com/400x250/17a2b8/ffffff?text=Laboratory" class="card-img-top" alt="Laboratory"/>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">Laboratory Services</h5>
+                                    <p class="card-text">State-of-the-art diagnostic testing with quick and accurate results.</p>
+                                    <a href="/hospital/services" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="https://via.placeholder.com/400x250/dc3545/ffffff?text=Emergency" class="card-img-top" alt="Emergency"/>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">Emergency Care</h5>
+                                    <p class="card-text">24/7 emergency services with experienced medical professionals ready to help.</p>
+                                    <a href="/hospital/services" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="/hospital/services" class="btn btn-outline-primary btn-lg">View All Services</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Specialists Section -->
+            <section class="py-5">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold">Our Specialists</h2>
+                        <p class="lead text-muted">Meet our experienced medical professionals</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0 text-center">
+                                <img src="https://via.placeholder.com/300x300/6f42c1/ffffff?text=Dr.+Smith" class="card-img-top rounded-circle mx-auto mt-3" alt="Dr. Smith" style="width: 150px; height: 150px;"/>
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Dr. Taye </h5>
+                                    <p class="text-muted">Cardiologist</p>
+                                    <p class="card-text">Specializing in heart diseases with over 15 years of experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0 text-center">
+                                <img src="https://via.placeholder.com/300x300/20c997/ffffff?text=Dr.+Johnson" class="card-img-top rounded-circle mx-auto mt-3" alt="Dr. Johnson" style="width: 150px; height: 150px;"/>
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Dr. Michael Johnson</h5>
+                                    <p class="text-muted">Neurologist</p>
+                                    <p class="card-text">Expert in neurological disorders and brain health.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0 text-center">
+                                <img src="https://via.placeholder.com/300x300/fc6d26/ffffff?text=Dr.+Williams" class="card-img-top rounded-circle mx-auto mt-3" alt="Dr. Williams" style="width: 150px; height: 150px;"/>
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Dr. Emily Williams</h5>
+                                    <p class="text-muted">Pediatrician</p>
+                                    <p class="card-text">Dedicated to children's health and development.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="/hospital/about" class="btn btn-outline-primary btn-lg">Meet All Specialists</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section class="py-5 bg-light">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold">Our Packages</h2>
+                        <p class="lead text-muted">Affordable healthcare packages for your needs</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">Basic Checkup</h5>
+                                    <h3 class="text-primary fw-bold">$99</h3>
+                                    <p class="text-muted">per visit</p>
+                                    <ul class="list-unstyled">
+                                        <li>✓ General Consultation</li>
+                                        <li>✓ Blood Pressure Check</li>
+                                        <li>✓ Basic Lab Tests</li>
+                                        <li>✓ Health Report</li>
+                                    </ul>
+                                    <a href="/hospital/services" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0 border-primary">
+                                <div class="card-header bg-primary text-white text-center">
+                                    <h5 class="mb-0">Most Popular</h5>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">Comprehensive</h5>
+                                    <h3 class="text-primary fw-bold">$199</h3>
+                                    <p class="text-muted">per visit</p>
+                                    <ul class="list-unstyled">
+                                        <li>✓ All Basic Services</li>
+                                        <li>✓ Advanced Lab Tests</li>
+                                        <li>✓ Specialist Consultation</li>
+                                        <li>✓ Follow-up Care</li>
+                                    </ul>
+                                    <a href="/hospital/services" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">Premium Care</h5>
+                                    <h3 class="text-primary fw-bold">$299</h3>
+                                    <p class="text-muted">per visit</p>
+                                    <ul class="list-unstyled">
+                                        <li>✓ All Comprehensive Services</li>
+                                        <li>✓ Home Visits</li>
+                                        <li>✓ 24/7 Support</li>
+                                        <li>✓ Personalized Care Plan</li>
+                                    </ul>
+                                    <a href="/hospital/services" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="py-5">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold">Get In Touch</h2>
+                        <p class="lead text-muted">We're here to help you with your healthcare needs</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-phone fa-3x text-primary"></i>
+                            </div>
+                            <h5>Call Us</h5>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-envelope fa-3x text-primary"></i>
+                            </div>
+                            <h5>Email Us</h5>
+                            <p>info@tayehospital.com</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-map-marker-alt fa-3x text-primary"></i>
+                            </div>
+                            <h5>Visit Us</h5>
+                            <p>123 Health Street<br/>Medical City, MC 12345</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="/hospital/contacts" class="btn btn-primary btn-lg">Contact Us Today</a>
+                    </div>
+                </div>
+            </section>
+        </t>
+    </template>
+
     <!-- Set hospital home as website homepage -->
     <record id="hospital_homepage" model="website.page">
         <field name="name">Hospital Home</field>
@@ -7,42 +225,13 @@
         <field name="view_id" ref="hospital_home_template"/>
         <field name="website_id" ref="website.default_website"/>
         <field name="is_homepage">True</field>
+        <field name="website_published">True</field>
     </record>
 
     <!-- Update default website to use hospital homepage -->
     <record id="website.default_website" model="website">
-        <field name="homepage_id" ref="hospital_homepage"/>
+        <field name="homepage_url">/</field>
     </record>
-    <template id="hospital_home_template" name="Hospital Home">
-        <t t-call="website.layout">
-            <section class="jumbotron text-center">
-                <div class="container">
-                    <h1 class="display-4">Welcome to Taye Hospital</h1>
-                    <p class="lead">Your health is our priority. Comprehensive healthcare services with modern technology.</p>
-                    <t t-if="user_id._is_public()">
-                        <a href="/web/login" class="btn btn-primary btn-lg">Login</a>
-                        <a href="/web/signup" class="btn btn-secondary btn-lg">Sign Up</a>
-                    </t>
-                </div>
-            </section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2>Patient Care</h2>
-                        <p>Advanced patient management with Bahmni features.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h2>Doctor Portal</h2>
-                        <p>Efficient tools for medical professionals.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h2>Admin Dashboard</h2>
-                        <p>Complete hospital administration.</p>
-                    </div>
-                </div>
-            </div>
-        </t>
-    </template>
 
     <template id="hospital_about_template" name="Hospital About">
         <t t-call="website.layout">
@@ -111,11 +300,221 @@
 
     <template id="admin_dashboard_template" name="Admin Dashboard">
         <t t-call="website.layout">
-            <div class="container">
-                <h1>Admin Dashboard</h1>
-                <p>Welcome, Admin. Manage the hospital system.</p>
-                <a href="/web" class="btn btn-primary">Go to Backend</a>
+            <div class="container-fluid py-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
+                <div class="container">
+                    <!-- Welcome Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="card border-0 shadow-lg" style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);">
+                                <div class="card-body text-center py-5">
+                                    <h1 class="display-4 fw-bold text-primary mb-3">🏥 Welcome to Taye Hospital Management</h1>
+                                    <p class="lead text-muted mb-4">Comprehensive Hospital Information System - Manage Patients, Staff, and Operations</p>
+                                    <a href="/web" class="btn btn-primary btn-lg px-5 py-3 shadow-sm fw-bold">
+                                        <i class="fas fa-cogs me-2"></i>Access Full Hospital System
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics Cards -->
+                    <div class="row mb-4">
+                        <div class="col-md-3 mb-3">
+                            <div class="card border-0 shadow-sm h-100" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                                <div class="card-body text-center text-white">
+                                    <i class="fas fa-users fa-3x mb-3"></i>
+                                    <h3 class="fw-bold">1,250+</h3>
+                                    <p class="mb-0">Registered Patients</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card border-0 shadow-sm h-100" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                <div class="card-body text-center text-white">
+                                    <i class="fas fa-user-md fa-3x mb-3"></i>
+                                    <h3 class="fw-bold">45</h3>
+                                    <p class="mb-0">Medical Staff</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card border-0 shadow-sm h-100" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                                <div class="card-body text-center text-white">
+                                    <i class="fas fa-calendar-check fa-3x mb-3"></i>
+                                    <h3 class="fw-bold">320</h3>
+                                    <p class="mb-0">Today's Appointments</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card border-0 shadow-sm h-100" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);">
+                                <div class="card-body text-center text-white">
+                                    <i class="fas fa-bed fa-3x mb-3"></i>
+                                    <h3 class="fw-bold">85</h3>
+                                    <p class="mb-0">Available Beds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="card border-0 shadow-lg">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="fas fa-bolt me-2"></i>Quick Actions</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-md-3">
+                                            <a href="/web#menu_id=hospital_management.menu_hospital_patients" class="btn btn-outline-primary btn-lg w-100 p-3">
+                                                <i class="fas fa-user-plus fa-2x mb-2"></i><br/>
+                                                <strong>Add New Patient</strong>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <a href="/web#menu_id=hospital_management.menu_hospital_appointments" class="btn btn-outline-success btn-lg w-100 p-3">
+                                                <i class="fas fa-calendar-plus fa-2x mb-2"></i><br/>
+                                                <strong>Schedule Appointment</strong>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <a href="/web#menu_id=hospital_management.menu_hospital_lab_tests" class="btn btn-outline-info btn-lg w-100 p-3">
+                                                <i class="fas fa-flask fa-2x mb-2"></i><br/>
+                                                <strong>Order Lab Test</strong>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <a href="/web#menu_id=hospital_management.menu_hospital_medical_records" class="btn btn-outline-warning btn-lg w-100 p-3">
+                                                <i class="fas fa-file-medical fa-2x mb-2"></i><br/>
+                                                <strong>View Records</strong>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System Features -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card border-0 shadow-lg">
+                                <div class="card-header bg-success text-white">
+                                    <h5 class="mb-0"><i class="fas fa-star me-2"></i>System Features</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check-circle text-success fa-2x me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-1">Patient Management</h6>
+                                                    <small class="text-muted">Complete patient registration and tracking</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check-circle text-success fa-2x me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-1">Electronic Health Records</h6>
+                                                    <small class="text-muted">Digital medical records and history</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check-circle text-success fa-2x me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-1">Appointment Scheduling</h6>
+                                                    <small class="text-muted">Automated appointment management</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check-circle text-success fa-2x me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-1">Laboratory Integration</h6>
+                                                    <small class="text-muted">Seamless lab test ordering and results</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check-circle text-success fa-2x me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-1">Pharmacy Management</h6>
+                                                    <small class="text-muted">Medication dispensing and inventory</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check-circle text-success fa-2x me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-1">Billing &amp; Invoicing</h6>
+                                                    <small class="text-muted">Automated billing and payment processing</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </t>
     </template>
+
+    <!-- Other hospital pages -->
+    <record id="hospital_about_page" model="website.page">
+        <field name="name">About Us</field>
+        <field name="url">/hospital/about</field>
+        <field name="view_id" ref="hospital_about_template"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="website_published">True</field>
+    </record>
+
+    <record id="hospital_services_page" model="website.page">
+        <field name="name">Our Services</field>
+        <field name="url">/hospital/services</field>
+        <field name="view_id" ref="hospital_services_template"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="website_published">True</field>
+    </record>
+
+    <record id="hospital_contacts_page" model="website.page">
+        <field name="name">Contact Us</field>
+        <field name="url">/hospital/contacts</field>
+        <field name="view_id" ref="hospital_contacts_template"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="website_published">True</field>
+    </record>
+
+    <record id="hospital_blogs_page" model="website.page">
+        <field name="name">Blogs</field>
+        <field name="url">/hospital/blogs</field>
+        <field name="view_id" ref="hospital_blogs_template"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="website_published">True</field>
+    </record>
+
+    <record id="hospital_news_page" model="website.page">
+        <field name="name">News</field>
+        <field name="url">/hospital/news</field>
+        <field name="view_id" ref="hospital_news_template"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="website_published">True</field>
+    </record>
+
+    <record id="hospital_management_page" model="website.page">
+        <field name="name">Hospital Management</field>
+        <field name="url">/hospital/management</field>
+        <field name="view_id" ref="admin_dashboard_template"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="website_published">True</field>
+    </record>
 </odoo>

@@ -5,11 +5,7 @@ from odoo.addons.web.controllers.main import Home
 class HospitalHome(Home):
     @http.route('/web', type='http', auth="user", website=True)
     def web_client(self, s_action=None, **kw):
-        user = request.env.user
-        if user.has_group('hospital_management.group_hospital_doctor') or user.has_group('hospital_management.group_hospital_patient') or user.has_group('hospital_management.group_hospital_admin'):
-            return request.redirect('/web#action=119&cids=1&menu_id=78')
-        else:
-            return super(HospitalHome, self).web_client(s_action, **kw)
+        return super(HospitalHome, self).web_client(s_action, **kw)
 
 class HospitalWebsite(http.Controller):
 
@@ -54,3 +50,10 @@ class HospitalWebsite(http.Controller):
         if not request.env.user.has_group('hospital_management.group_hospital_admin'):
             return request.redirect('/web/login')
         return request.render('hospital_management.admin_dashboard_template')
+
+    @http.route('/hospital/management', auth='user', website=True)
+    def hospital_management(self, **kw):
+        if request.env.user._is_public():
+            return request.redirect('/web/login')
+        menu = request.env.ref('hospital_management.menu_hospital_root')
+        return request.redirect('/web#menu_id=%s' % menu.id)
