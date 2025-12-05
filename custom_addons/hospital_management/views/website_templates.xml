@@ -321,7 +321,7 @@
                     <div class="row mb-4">
                         <div class="col-md-3 mb-3">
                             <div class="card border-0 shadow-sm h-100" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
-                                <div class="card-body text-center text-white">
+                                <div class="card-body text-center text-dark">
                                     <i class="fas fa-users fa-3x mb-3"></i>
                                     <h3 class="fw-bold">1,250+</h3>
                                     <p class="mb-0">Registered Patients</p>
@@ -330,7 +330,7 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="card border-0 shadow-sm h-100" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-                                <div class="card-body text-center text-white">
+                                <div class="card-body text-center text-dark">
                                     <i class="fas fa-user-md fa-3x mb-3"></i>
                                     <h3 class="fw-bold">45</h3>
                                     <p class="mb-0">Medical Staff</p>
@@ -339,7 +339,7 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="card border-0 shadow-sm h-100" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
-                                <div class="card-body text-center text-white">
+                                <div class="card-body text-center text-dark">
                                     <i class="fas fa-calendar-check fa-3x mb-3"></i>
                                     <h3 class="fw-bold">320</h3>
                                     <p class="mb-0">Today's Appointments</p>
@@ -348,7 +348,7 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="card border-0 shadow-sm h-100" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);">
-                                <div class="card-body text-center text-white">
+                                <div class="card-body text-center text-dark">
                                     <i class="fas fa-bed fa-3x mb-3"></i>
                                     <h3 class="fw-bold">85</h3>
                                     <p class="mb-0">Available Beds</p>
